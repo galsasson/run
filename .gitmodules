@@ -1,0 +1,3 @@
+[submodule "OF"]
+	path = OF
+	url = git@github.com:galsasson/openFrameworks.git
