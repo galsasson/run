@@ -1,3 +1,6 @@
 [submodule "OF"]
 	path = OF
 	url = git@github.com:galsasson/openFrameworks.git
+[submodule "external_addons/ofxUINode"]
+	path = external_addons/ofxUINode
+	url = git@github.com:galsasson/ofxUINode.git
