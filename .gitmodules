@@ -7,3 +7,6 @@
 [submodule "external_addons/ofxSpriteSheet"]
 	path = external_addons/ofxSpriteSheet
 	url = git@github.com:galsasson/ofxSpriteSheet.git
+[submodule "external_addons/ofxLiquidFun"]
+	path = external_addons/ofxLiquidFun
+	url = git@github.com:galsasson/ofxLiquidFun.git
