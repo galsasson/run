@@ -4,3 +4,6 @@
 [submodule "external_addons/ofxUINode"]
 	path = external_addons/ofxUINode
 	url = git@github.com:galsasson/ofxUINode.git
+[submodule "external_addons/ofxSpriteSheet"]
+	path = external_addons/ofxSpriteSheet
+	url = git@github.com:galsasson/ofxSpriteSheet.git
