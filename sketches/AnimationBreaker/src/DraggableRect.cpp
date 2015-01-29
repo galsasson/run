@@ -48,7 +48,8 @@ void DraggableRect::draw()
 	ofDrawRectangle(0, 0, getWidth(), getHeight());
 
 	ofFill();
-	ofDrawEllipse(getWidth()/2, getHeight()/2, 5, 5);
+	ofSetColor(255, 0, 0);
+	ofDrawEllipse(getWidth()/2, getHeight()/2, 10, 10);
 
 	ofDrawBitmapString(ofToString(id), 0, 0);
 }

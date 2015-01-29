@@ -31,6 +31,7 @@ void ofApp::setup(){
 
 	page = new TextureButton();
 	page->setup(&spritePage.getTexture());
+	page->setPosition(0, -500, 0);
 	scene.addChild(page);
 
 //	for (float y=margin; y<spritePage.getHeight()-margin; y+=squareSize.y)
@@ -86,7 +87,7 @@ void ofApp::onCreateRowClicked(TouchEvent &event)
 {
 	for (float x=pageMargin; x<spritePage.getWidth()-pageMargin; x+=squareSize.x)
 	{
-		createSpriteBox(x, pageMargin);
+		createSpriteBox(x, pageMargin+page->getGlobalScale().y*10000);
 	}
 
 }
@@ -192,7 +193,7 @@ void ofApp::draw(){
 
 	ofPushMatrix();
 	ofTranslate(ofGetWindowWidth()-sampleW/2, ofGetWindowHeight()-sampleH-sampleH/2);
-	ofScale(0.5, 0.5);
+	ofScale(100, 100);
 	spriteAnimation.draw();
 	ofPopMatrix();
 }

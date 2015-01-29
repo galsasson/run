@@ -10,3 +10,6 @@
 [submodule "external_addons/ofxLiquidFun"]
 	path = external_addons/ofxLiquidFun
 	url = git@github.com:galsasson/ofxLiquidFun.git
+[submodule "external_addons/ofxTimeMeasurements"]
+	path = external_addons/ofxTimeMeasurements
+	url = git@github.com:armadillu/ofxTimeMeasurements.git
