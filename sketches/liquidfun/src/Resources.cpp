@@ -54,7 +54,11 @@ void Resources::loadTextures()
 	loadTexture("inflating", "spritesheets/inflating.png");
 	loadTexture("rotating", "spritesheets/rotating.png");
 	loadTexture("x", "spritesheets/x.png");
+	loadTexture("x-trans", "spritesheets/x-trans.png");
 	loadTexture("loading", "spritesheets/loading.png");
+	loadTexture("moving", "spritesheets/moving.png");
+
+	loadTexture("background", "images/background1.png");
 
 }
 

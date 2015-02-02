@@ -25,12 +25,16 @@ public:
 	void update(float dt);
 	void draw();
 
+	bool contains(const ofVec2f& p);
+
 private:
 
 	int id;
 	
 	ofVec2f touchOffset;
+	bool bDragScale;
 
+	bool scaleContains(const ofVec2f& local);
 
 };
 #endif /* defined(__AnimationBreaker__DraggableRect__) */

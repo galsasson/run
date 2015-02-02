@@ -4,6 +4,7 @@
 #include "ofxiOS.h"
 #include "ofxiOSExtras.h"
 
+#include "ofxUINode.h"
 #include "ofxLiquidFun.h"
 #include "ofxSprite.h"
 
@@ -27,6 +28,13 @@ class ofApp : public ofxiOSApp {
         void deviceOrientationChanged(int newOrientation);
 
 	void createNewParticle(int id, float x, float y);
+	void createNewParticle(int id, const ofVec2f& p);
+
+	void drawSprites();
+
+	ofVec2f toWorld(const ofVec2f& p);
+
+	ofxUINode scene;
 
 	ofxBox2d box2d;
 	vector<ofxBox2dRect*> rects;
@@ -36,6 +44,12 @@ class ofApp : public ofxiOSApp {
 
 	ofxSprite* sp;
 
+	ofFbo fbo;
+
+	ofRectangle viewRect;
+
+	bool bFire;
+	ofVec2f firePos;
 };
 
 

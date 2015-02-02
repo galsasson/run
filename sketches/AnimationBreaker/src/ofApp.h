@@ -33,6 +33,7 @@ private:
 	void createSpriteBox(float x, float y);
 
 	void updateSpriteImage(DraggableRect* rect);
+	void transperifySpriteImage();
 
 	ofImage spritePage;
 	ofVec2f squareSize;

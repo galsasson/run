@@ -80,14 +80,14 @@ void ofApp::setup(){
 
 void ofApp::onNewSpriteClicked(TouchEvent &event)
 {
-	createSpriteBox(0, 0);
+	createSpriteBox(0, pageMargin/page->getGlobalScale().y);
 }
 
 void ofApp::onCreateRowClicked(TouchEvent &event)
 {
 	for (float x=pageMargin; x<spritePage.getWidth()-pageMargin; x+=squareSize.x)
 	{
-		createSpriteBox(x, pageMargin+page->getGlobalScale().y*10000);
+		createSpriteBox(x, pageMargin/page->getGlobalScale().y);
 	}
 
 }
@@ -128,7 +128,8 @@ void ofApp::onCreateSpritesClicked(TouchEvent &event)
 		updateSpriteImage(rects[i]);
 
 		fbo.begin();
-		spriteFbo.draw(drawPointer);
+		spriteImage.draw(drawPointer);
+//		spriteFbo.draw(drawPointer);
 		fbo.end();
 
 		drawPointer.x += spriteImage.getWidth();
@@ -166,7 +167,50 @@ void ofApp::updateSpriteImage(DraggableRect *rect)
 
 	spriteFbo.end();
 
-//	spriteFbo.getTexture().readToPixels(spriteImage.getPixels());
+	spriteFbo.getTexture().readToPixels(spriteImage.getPixels());
+	spriteImage.update();
+
+	// make it transparent based on brightness
+	transperifySpriteImage();
+}
+
+void ofApp::transperifySpriteImage()
+{
+	float minLightness = 255;
+	float minBrightness = 255;
+	float maxLightness = 0;
+	float maxBrightness = 0;
+
+	for (int y=0; y<spriteImage.getHeight(); y++)
+	{
+		for (int x=0; x<spriteImage.getWidth(); x++)
+		{
+			ofColor c = spriteImage.getColor(x, y);
+
+			if (c.getLightness() < minLightness) {
+				minLightness = c.getLightness();
+			}
+			if (c.getBrightness() < minBrightness) {
+				minBrightness = c.getBrightness();
+			}
+
+			if (c.getLightness() > maxLightness) {
+				maxLightness = c.getLightness();
+			}
+			if (c.getBrightness() > maxBrightness) {
+				maxBrightness = c.getBrightness();
+			}
+
+			ofColor realColor(255, 255, 255, 255-c.getLightness());
+			spriteImage.setColor(x, y, realColor);
+		}
+	}
+
+	cout<<"Stats: "<<endl;
+	cout<<" - lightness ( "<<minLightness<<" - "<<maxLightness<<" )"<<endl;
+	cout<<" - brightness ( "<<minBrightness<<" - "<<maxBrightness<<" )"<<endl;
+
+	spriteImage.update();
 }
 
 //--------------------------------------------------------------
