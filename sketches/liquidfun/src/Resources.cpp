@@ -45,18 +45,18 @@ ofTexture* Resources::getTexture(const string &name)
 
 void Resources::loadTextures()
 {
-	loadTexture("dot", "spritesheets/dot.png");
-	loadTexture("star", "spritesheets/star.png");
-	loadTexture("star-small", "spritesheets/star-small.png");
-	loadTexture("hollow-dot", "spritesheets/hollow-dot.png");
-	loadTexture("square", "spritesheets/square.png");
-	loadTexture("line", "spritesheets/line.png");
-	loadTexture("inflating", "spritesheets/inflating.png");
-	loadTexture("rotating", "spritesheets/rotating.png");
-	loadTexture("x", "spritesheets/x.png");
-	loadTexture("x-trans", "spritesheets/x-trans.png");
-	loadTexture("loading", "spritesheets/loading.png");
-	loadTexture("moving", "spritesheets/moving.png");
+//	loadTexture("dot", "spritesheets/dot.png");
+//	loadTexture("star", "spritesheets/star.png");
+//	loadTexture("star-small", "spritesheets/star-small.png");
+//	loadTexture("hollow-dot", "spritesheets/hollow-dot.png");
+//	loadTexture("square", "spritesheets/square.png");
+//	loadTexture("line", "spritesheets/line.png");
+//	loadTexture("inflating", "spritesheets/inflating.png");
+//	loadTexture("rotating", "spritesheets/rotating.png");
+//	loadTexture("x", "spritesheets/x.png");
+//	loadTexture("x-trans", "spritesheets/x-trans.png");
+//	loadTexture("loading", "spritesheets/loading.png");
+//	loadTexture("moving", "spritesheets/moving.png");
 
 	loadTexture("background", "images/background1.png");
 

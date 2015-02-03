@@ -19,7 +19,7 @@ void ofApp::setup()
 	TIME_SAMPLE_DISABLE_AVERAGE();
 	TIME_SAMPLE_SET_REMOVE_EXPIRED_THREADS(true);
 	TIME_SAMPLE_GET_INSTANCE()->setDeadThreadTimeDecay(0.985);
-//	TIME_SAMPLE_DISABLE();
+	TIME_SAMPLE_DISABLE();
 //	TIME_SAMPLE_GET_INSTANCE()->drawUiWithFontStash("font/VeraMono.ttf");
 
 
@@ -28,9 +28,9 @@ void ofApp::setup()
 	Resources::one().setup();
 
 	box2d.init();
-	box2d.setGravity(0, 30);
-	box2d.setFPS(20);
-	box2d.setIterations(10, 20);
+	box2d.setGravity(0, 0);
+	box2d.setFPS(30);
+	box2d.setIterations(30, 60);
 
 	box2d.createBounds();
 	box2d.enableGrabbing();
@@ -50,7 +50,7 @@ void ofApp::setup()
 	box2d.createEdge(line, b2_staticBody, 0.5);
 
 
-	for (int i=0; i<10; i++)
+	for (int i=0; i<0; i++)
 	{
 		ofxBox2dRect* rect = new ofxBox2dRect();
 		float density = ofRandom(0.3, 5);
@@ -60,8 +60,12 @@ void ofApp::setup()
 		rects.push_back(rect);
 	}
 
-	viewRect = ofRectangle(300, 200, ofGetWidth()-300, ofGetHeight()-200);
+//	viewRect = ofRectangle(ofGetWidth()*0.5f, ofGetHeight()*0.5f,
+//						   ofGetWidth()*0.5f, ofGetHeight()*0.5f);
+	viewRect = ofRectangle(0, 0, ofGetWidth(), ofGetHeight());
 
+	tree = new JointsTree();
+	tree->setup(&box2d);
 }
 
 //--------------------------------------------------------------
@@ -89,6 +93,10 @@ void ofApp::update(){
 
 	if (bFire) {
 		createNewParticle(0, firePos);
+		createNewParticle(0, firePos);
+		createNewParticle(0, firePos);
+		createNewParticle(0, firePos);
+		createNewParticle(0, firePos);
 	}
 }
 
@@ -101,8 +109,8 @@ void ofApp::draw()
 
 	ofPushMatrix();
 	ofTranslate(-viewRect.x, -viewRect.y);
-	float s = ofGetWidth() / viewRect.width;
-	ofScale(s, s);
+	scale = ofVec2f(ofGetWidth() / viewRect.width, ofGetHeight()/ viewRect.height);
+	ofScale(scale.x, scale.y);
 
 	ofSetColor(255);
 	Resources::one().getTexture("background")->draw(0, 0);
@@ -116,14 +124,30 @@ void ofApp::draw()
 		rects[i]->draw();
 	}
 
-	ofSetColor(200, 50, 50);
+	ofSetColor(100, 130, 255);
 	ofFill();
-	ofDrawEllipse(firePos, 20, 20);
-
-//	box2d.draw();
+	ofDrawEllipse(firePos, 10, 10);
 
 	particleSystem.draw();
+
+
+	tree->draw();
+
+
+	// debug corners
+	ofSetColor(0, 255, 0);
+	ofDrawEllipse(viewRect.getLeft(), viewRect.getTop(), 20, 20);
+	ofDrawEllipse(viewRect.getRight(), viewRect.getTop(), 20, 20);
+	ofDrawEllipse(viewRect.getRight(), viewRect.getBottom(), 20, 20);
+	ofDrawEllipse(viewRect.getLeft(), viewRect.getBottom(), 20, 20);
+
+
 	ofPopMatrix();
+
+
+	//	box2d.draw();
+	
+
 
 	ofSetColor(0);
 	ofDrawBitmapString("particles: " + ofToString(particleSystem.getParticleCount()), 300, 10);
@@ -142,7 +166,8 @@ void ofApp::touchDown(ofTouchEventArgs & touch)
 		bFire = true;
 	}
 	else {
-		firePos = toWorld(ofVec2f(touch.x, touch.y));
+//		firePos = toWorld(ofVec2f(touch.x, touch.y));
+		firePos = getWorldPointer(ofVec2f(touch.x, touch.y));
 	}
 
 //	createNewParticle(touch.id, toWorld(ofVec2f(touch.x, touch.y)));
@@ -153,11 +178,14 @@ void ofApp::touchDown(ofTouchEventArgs & touch)
 //--------------------------------------------------------------
 void ofApp::touchMoved(ofTouchEventArgs & touch)
 {
+	toWorld(ofVec2f(touch.x, touch.y));
+
 	if (touch.x < ofGetWidth()*0.3f) {
 
 	}
 	else {
-		firePos = toWorld(ofVec2f(touch.x, touch.y));
+//		firePos = toWorld(ofVec2f(touch.x, touch.y));
+		firePos = getWorldPointer(ofVec2f(touch.x, touch.y));
 	}
 
 
@@ -232,7 +260,7 @@ void ofApp::createNewParticle(int id, float x, float y)
 	s->play();
 	sprites.push_back(s);
 
-	particleSystem.createParticle(x, y, 0, 0, s);
+	particleSystem.createParticle(x+ofRandom(-1,1), y+ofRandom(-1, 1), 0, 0, s);
 
 }
 
@@ -258,9 +286,20 @@ void ofApp::drawSprites()
 #endif
 }
 
-
+// this is wrong:
 ofVec2f ofApp::toWorld(const ofVec2f &p)
 {
-	cout<<"p = "<<p<<", w = "<<p - viewRect.getTopLeft() * (ofGetWidth() / viewRect.width)<<endl;
-	return p - viewRect.getTopLeft() * (ofGetWidth() / viewRect.width);
+	cout<<"topleft = "<<viewRect.getTopLeft()<<endl;;
+	cout<<"screen_width / width = "<<ofGetWidth() / viewRect.width<<endl;
+	cout<<"p = "<<p<<", w = "<<(p + viewRect.getTopLeft()) * (ofGetWidth() / viewRect.width)<<endl;
+
+	return ((p + viewRect.getTopLeft()) * (ofGetWidth() / viewRect.width));
+}
+
+ofVec2f ofApp::getWorldPointer(const ofVec2f &cp, float power)
+{
+	float x = ofMap(cp.x, ofGetWidth(), ofGetWidth()*0.7f, viewRect.getRight(), viewRect.x*(1-power));
+	float y = ofMap(cp.y, ofGetHeight(), ofGetHeight()*0.7f, viewRect.getBottom(), viewRect.y*(1-power));
+
+	return ofVec2f(x, y);
 }
