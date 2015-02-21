@@ -8,6 +8,7 @@
 
 #include "DraggableRect.h"
 
+using namespace ofxInterface;
 
 void DraggableRect::setup(int _id, float w, float h)
 {
@@ -36,7 +37,7 @@ void DraggableRect::onTouchDown(TouchEvent &event)
 
 void DraggableRect::onTouchMove(TouchEvent &event)
 {
-	ofVec2f parentPos = ((ofxUINode*)parent)->toLocal(event.position);
+	ofVec2f parentPos = ((Node*)parent)->toLocal(event.position);
 
 	if (bDragScale) {
 		setSize((parentPos-touchOffset) - getPosition());

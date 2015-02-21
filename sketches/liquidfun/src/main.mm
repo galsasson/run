@@ -3,21 +3,18 @@
 #include "ofApp.h"
 
 int main() {
-    
-    //  here are the most commonly used iOS window settings.
-    //------------------------------------------------------
-    ofAppiOSWindow::Settings settings;
-    settings.enableRetina = true; // enables retina resolution if the device supports it.
-    settings.enableDepth = false; // enables depth buffer for 3d drawing.
-    settings.enableAntiAliasing = false; // enables anti-aliasing which smooths out graphics on the screen.
-    settings.numOfAntiAliasingSamples = 0; // number of samples used for anti-aliasing.
-    settings.enableHardwareOrientation = true; // enables native view orientation.
-    settings.enableHardwareOrientationAnimation = true; // enables native orientation changes to be animated.
-    settings.rendererType = OFXIOS_RENDERER_ES1; // type of renderer to use, ES1, ES2, etc.
-    
-    ofAppiOSWindow window(settings);
-    
-	ofSetupOpenGL(&window, 0, 0, OF_FULLSCREEN);
+
+	ofiOSWindowSettings settings;
+	settings.enableRetina = true;
+	settings.enableDepth = false;
+	settings.enableAntiAliasing = true;
+	settings.numOfAntiAliasingSamples = 4;
+	settings.enableHardwareOrientation = true;
+	settings.enableHardwareOrientationAnimation = true;
+	settings.glesVersion = OFXIOS_RENDERER_ES1;
+	settings.windowMode = OF_FULLSCREEN;
+
+	ofCreateWindow(settings);
     
 	ofRunApp(new ofApp);
 }

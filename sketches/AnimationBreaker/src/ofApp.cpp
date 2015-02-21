@@ -9,6 +9,7 @@
 
 #define DPI		600
 
+using namespace ofxInterface;
 
 //--------------------------------------------------------------
 void ofApp::setup(){

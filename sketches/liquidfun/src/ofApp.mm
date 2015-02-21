@@ -19,7 +19,7 @@ void ofApp::setup()
 	TIME_SAMPLE_DISABLE_AVERAGE();
 	TIME_SAMPLE_SET_REMOVE_EXPIRED_THREADS(true);
 	TIME_SAMPLE_GET_INSTANCE()->setDeadThreadTimeDecay(0.985);
-	TIME_SAMPLE_DISABLE();
+//	TIME_SAMPLE_DISABLE();
 //	TIME_SAMPLE_GET_INSTANCE()->drawUiWithFontStash("font/VeraMono.ttf");
 
 
@@ -28,7 +28,7 @@ void ofApp::setup()
 	Resources::one().setup();
 
 	box2d.init();
-	box2d.setGravity(0, 0);
+	box2d.setGravity(0, 10);
 	box2d.setFPS(30);
 	box2d.setIterations(30, 60);
 
@@ -36,7 +36,9 @@ void ofApp::setup()
 	box2d.enableGrabbing();
 
 	particleSystem.setup(box2d.getWorld(), 10000, 0, 6);
+	particleSystem.useTexture = false;
 
+	// the background ground line
 	ofPolyline line;
 	line.addVertex(0, 540);
 	line.addVertex(220, 360);
@@ -64,8 +66,12 @@ void ofApp::setup()
 //						   ofGetWidth()*0.5f, ofGetHeight()*0.5f);
 	viewRect = ofRectangle(0, 0, ofGetWidth(), ofGetHeight());
 
-	tree = new JointsTree();
-	tree->setup(&box2d);
+	JointsTree* tree = new JointsTree();
+	tree->setup(&box2d, 400, 50);
+	trees.push_back(tree);
+//	tree = new JointsTree();
+//	tree->setup(&box2d, 300, 80);
+//	trees.push_back(tree);
 }
 
 //--------------------------------------------------------------
@@ -74,6 +80,10 @@ void ofApp::update(){
 
 
 #if 1
+	for (JointsTree* tree: trees) {
+		tree->update(1.0 / 60);
+	}
+
 	box2d.update();
 
 	int nParts = particleSystem.getParticleCount();
@@ -131,7 +141,9 @@ void ofApp::draw()
 	particleSystem.draw();
 
 
-	tree->draw();
+	for (JointsTree* tree: trees) {
+		tree->draw();
+	}
 
 
 	// debug corners
@@ -260,8 +272,8 @@ void ofApp::createNewParticle(int id, float x, float y)
 	s->play();
 	sprites.push_back(s);
 
-	particleSystem.createParticle(x+ofRandom(-1,1), y+ofRandom(-1, 1), 0, 0, s);
-
+//	particleSystem.createParticle(x+ofRandom(-4,4), y+ofRandom(-4, 4), 0, 10, s);
+	particleSystem.createParticle(x, y, 0, 0, s);
 }
 
 

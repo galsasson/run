@@ -13,3 +13,6 @@
 [submodule "external_addons/ofxTimeMeasurements"]
 	path = external_addons/ofxTimeMeasurements
 	url = git@github.com:armadillu/ofxTimeMeasurements.git
+[submodule "external_addons/ofxInterface"]
+	path = external_addons/ofxInterface
+	url = git@github.com:galsasson/ofxInterface.git

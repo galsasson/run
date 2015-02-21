@@ -16,26 +16,24 @@
 
 #include "TreeNode.h"
 
-class JointsTree : ofNode
+class JointsTree
 {
 public:
 
-	void setup(ofxBox2d* box2d);
+	void setup(ofxBox2d* box2d, float x, float y);
+	void setPosition(float x, float y);
 
 	void update(float dt);
 	void draw();
 
 private:
 
-	void createJoint();
-
 	ofxBox2d* box2d;
 	b2World* m_world;
+	ofxBox2dRect* root;
 
-	b2Body* m_bodyA;
-	b2Body* m_bodyB;
-
-	void createChain();
+	void createChain(float x, float y);
+	void createBird();
 
 	vector<ofxBox2dRect*> rects;
 

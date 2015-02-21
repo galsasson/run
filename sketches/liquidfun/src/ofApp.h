@@ -4,7 +4,6 @@
 #include "ofxiOS.h"
 #include "ofxiOSExtras.h"
 
-#include "ofxUINode.h"
 #include "ofxLiquidFun.h"
 #include "ofxSprite.h"
 #include "JointsTree.h"
@@ -37,8 +36,6 @@ class ofApp : public ofxiOSApp {
 
 	ofVec2f getWorldPointer(const ofVec2f& cp, float power = 0.2f);
 
-	ofxUINode scene;
-
 	ofxBox2d box2d;
 	vector<ofxBox2dRect*> rects;
 	vector<ofxSprite*> sprites;
@@ -56,7 +53,8 @@ class ofApp : public ofxiOSApp {
 	ofVec2f firePos;
 
 
-	JointsTree* tree;
+	vector<JointsTree*> trees;
+
 };
 
 

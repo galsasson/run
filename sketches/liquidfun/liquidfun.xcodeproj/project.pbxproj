@@ -10,13 +10,6 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
-		2A1188511A75D49800904499 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2A1188431A75D49800904499 /* .gitignore */; };
-		2A1188521A75D49800904499 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 2A1188441A75D49800904499 /* README.md */; };
-		2A1188531A75D49800904499 /* BitmapTextButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A1188471A75D49800904499 /* BitmapTextButton.cpp */; };
-		2A1188541A75D49800904499 /* TextureButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A1188491A75D49800904499 /* TextureButton.cpp */; };
-		2A1188551A75D49800904499 /* ofxUINode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A11884B1A75D49800904499 /* ofxUINode.cpp */; };
-		2A1188561A75D49800904499 /* TouchEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A11884D1A75D49800904499 /* TouchEvent.cpp */; };
-		2A1188571A75D49800904499 /* TouchManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A11884F1A75D49800904499 /* TouchManager.cpp */; };
 		2A11885E1A75D4A000904499 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2A1188591A75D4A000904499 /* .gitignore */; };
 		2A11885F1A75D4A000904499 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 2A11885A1A75D4A000904499 /* README.md */; };
 		2A11896B1A75D4AA00904499 /* b2BroadPhase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A1188AA1A75D4AA00904499 /* b2BroadPhase.cpp */; };
@@ -85,6 +78,11 @@
 		2A1189B81A75DA8D00904499 /* ofxSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A11885C1A75D4A000904499 /* ofxSprite.cpp */; };
 		2A1189BD1A75F1D000904499 /* Resources.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A1189BB1A75F1D000904499 /* Resources.cpp */; };
 		2A1189ED1A79D19200904499 /* ofxTimeMeasurements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A1189E61A79D19200904499 /* ofxTimeMeasurements.cpp */; };
+		2A986BF01A831B8600C4A7F0 /* BitmapTextButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A986BDA1A831B8600C4A7F0 /* BitmapTextButton.cpp */; };
+		2A986BF11A831B8600C4A7F0 /* TextureButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A986BDC1A831B8600C4A7F0 /* TextureButton.cpp */; };
+		2A986BF21A831B8600C4A7F0 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A986BDE1A831B8600C4A7F0 /* Node.cpp */; };
+		2A986BF31A831B8600C4A7F0 /* TouchEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A986BE11A831B8600C4A7F0 /* TouchEvent.cpp */; };
+		2A986BF41A831B8600C4A7F0 /* TouchManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A986BE31A831B8600C4A7F0 /* TouchManager.cpp */; };
 		2AC525C41A7C80EC00F28BC0 /* TreeNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2AC525C21A7C80EC00F28BC0 /* TreeNode.cpp */; };
 		2AC525C71A7C811300F28BC0 /* JointsTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2AC525C51A7C811300F28BC0 /* JointsTree.cpp */; };
 		2AE242FF1A8075EE00515318 /* ofxBox2dRevoluteJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2AE242FD1A8075EE00515318 /* ofxBox2dRevoluteJoint.cpp */; };
@@ -130,18 +128,6 @@
 		1D6058910D05DD3D006BFB54 /* liquidfun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = liquidfun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		2A1188431A75D49800904499 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		2A1188441A75D49800904499 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		2A1188471A75D49800904499 /* BitmapTextButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BitmapTextButton.cpp; sourceTree = "<group>"; };
-		2A1188481A75D49800904499 /* BitmapTextButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitmapTextButton.h; sourceTree = "<group>"; };
-		2A1188491A75D49800904499 /* TextureButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextureButton.cpp; sourceTree = "<group>"; };
-		2A11884A1A75D49800904499 /* TextureButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureButton.h; sourceTree = "<group>"; };
-		2A11884B1A75D49800904499 /* ofxUINode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxUINode.cpp; sourceTree = "<group>"; };
-		2A11884C1A75D49800904499 /* ofxUINode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxUINode.h; sourceTree = "<group>"; };
-		2A11884D1A75D49800904499 /* TouchEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TouchEvent.cpp; sourceTree = "<group>"; };
-		2A11884E1A75D49800904499 /* TouchEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchEvent.h; sourceTree = "<group>"; };
-		2A11884F1A75D49800904499 /* TouchManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TouchManager.cpp; sourceTree = "<group>"; };
-		2A1188501A75D49800904499 /* TouchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchManager.h; sourceTree = "<group>"; };
 		2A1188591A75D4A000904499 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		2A11885A1A75D4A000904499 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2A11885C1A75D4A000904499 /* ofxSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxSprite.cpp; sourceTree = "<group>"; };
@@ -291,6 +277,17 @@
 		2A1189E21A79D19200904499 /* tree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tree.h; sourceTree = "<group>"; };
 		2A1189E61A79D19200904499 /* ofxTimeMeasurements.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxTimeMeasurements.cpp; sourceTree = "<group>"; };
 		2A1189E71A79D19200904499 /* ofxTimeMeasurements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxTimeMeasurements.h; sourceTree = "<group>"; };
+		2A986BDA1A831B8600C4A7F0 /* BitmapTextButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BitmapTextButton.cpp; sourceTree = "<group>"; };
+		2A986BDB1A831B8600C4A7F0 /* BitmapTextButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitmapTextButton.h; sourceTree = "<group>"; };
+		2A986BDC1A831B8600C4A7F0 /* TextureButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextureButton.cpp; sourceTree = "<group>"; };
+		2A986BDD1A831B8600C4A7F0 /* TextureButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureButton.h; sourceTree = "<group>"; };
+		2A986BDE1A831B8600C4A7F0 /* Node.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
+		2A986BDF1A831B8600C4A7F0 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		2A986BE01A831B8600C4A7F0 /* ofxInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxInterface.h; sourceTree = "<group>"; };
+		2A986BE11A831B8600C4A7F0 /* TouchEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TouchEvent.cpp; sourceTree = "<group>"; };
+		2A986BE21A831B8600C4A7F0 /* TouchEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchEvent.h; sourceTree = "<group>"; };
+		2A986BE31A831B8600C4A7F0 /* TouchManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TouchManager.cpp; sourceTree = "<group>"; };
+		2A986BE41A831B8600C4A7F0 /* TouchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchManager.h; sourceTree = "<group>"; };
 		2AC525C21A7C80EC00F28BC0 /* TreeNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TreeNode.cpp; sourceTree = "<group>"; };
 		2AC525C31A7C80EC00F28BC0 /* TreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeNode.h; sourceTree = "<group>"; };
 		2AC525C51A7C811300F28BC0 /* JointsTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JointsTree.cpp; sourceTree = "<group>"; };
@@ -392,42 +389,6 @@
 				67DFA53419F92A5E003B3434 /* Accelerate.framework */,
 			);
 			name = "core frameworks";
-			sourceTree = "<group>";
-		};
-		2A1188421A75D49800904499 /* ofxUINode */ = {
-			isa = PBXGroup;
-			children = (
-				2A1188431A75D49800904499 /* .gitignore */,
-				2A1188441A75D49800904499 /* README.md */,
-				2A1188451A75D49800904499 /* src */,
-			);
-			name = ofxUINode;
-			path = ../../external_addons/ofxUINode;
-			sourceTree = "<group>";
-		};
-		2A1188451A75D49800904499 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				2A1188461A75D49800904499 /* components */,
-				2A11884B1A75D49800904499 /* ofxUINode.cpp */,
-				2A11884C1A75D49800904499 /* ofxUINode.h */,
-				2A11884D1A75D49800904499 /* TouchEvent.cpp */,
-				2A11884E1A75D49800904499 /* TouchEvent.h */,
-				2A11884F1A75D49800904499 /* TouchManager.cpp */,
-				2A1188501A75D49800904499 /* TouchManager.h */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		2A1188461A75D49800904499 /* components */ = {
-			isa = PBXGroup;
-			children = (
-				2A1188471A75D49800904499 /* BitmapTextButton.cpp */,
-				2A1188481A75D49800904499 /* BitmapTextButton.h */,
-				2A1188491A75D49800904499 /* TextureButton.cpp */,
-				2A11884A1A75D49800904499 /* TextureButton.h */,
-			);
-			path = components;
 			sourceTree = "<group>";
 		};
 		2A1188581A75D4A000904499 /* ofxSpriteSheet */ = {
@@ -723,6 +684,41 @@
 			path = src;
 			sourceTree = "<group>";
 		};
+		2A986BC31A831B8600C4A7F0 /* ofxInterface */ = {
+			isa = PBXGroup;
+			children = (
+				2A986BD81A831B8600C4A7F0 /* src */,
+			);
+			name = ofxInterface;
+			path = ../../external_addons/ofxInterface;
+			sourceTree = "<group>";
+		};
+		2A986BD81A831B8600C4A7F0 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				2A986BD91A831B8600C4A7F0 /* components */,
+				2A986BDE1A831B8600C4A7F0 /* Node.cpp */,
+				2A986BDF1A831B8600C4A7F0 /* Node.h */,
+				2A986BE01A831B8600C4A7F0 /* ofxInterface.h */,
+				2A986BE11A831B8600C4A7F0 /* TouchEvent.cpp */,
+				2A986BE21A831B8600C4A7F0 /* TouchEvent.h */,
+				2A986BE31A831B8600C4A7F0 /* TouchManager.cpp */,
+				2A986BE41A831B8600C4A7F0 /* TouchManager.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		2A986BD91A831B8600C4A7F0 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				2A986BDA1A831B8600C4A7F0 /* BitmapTextButton.cpp */,
+				2A986BDB1A831B8600C4A7F0 /* BitmapTextButton.h */,
+				2A986BDC1A831B8600C4A7F0 /* TextureButton.cpp */,
+				2A986BDD1A831B8600C4A7F0 /* TextureButton.h */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
 		BB16E9930F2B1E5900518274 /* libs */ = {
 			isa = PBXGroup;
 			children = (
@@ -734,10 +730,10 @@
 		BB16F26B0F2B646B00518274 /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				2A986BC31A831B8600C4A7F0 /* ofxInterface */,
 				2A1189DB1A79D19200904499 /* ofxTimeMeasurements */,
 				2A1188611A75D4AA00904499 /* ofxLiquidFun */,
 				2A1188581A75D4A000904499 /* ofxSpriteSheet */,
-				2A1188421A75D49800904499 /* ofxUINode */,
 			);
 			name = addons;
 			sourceTree = "<group>";
@@ -866,7 +862,6 @@
 				678E130A17951536005B6D19 /* Icon.png in Resources */,
 				678E130C1795153C005B6D19 /* Default.png in Resources */,
 				678E130E17951540005B6D19 /* Default@2x.png in Resources */,
-				2A1188511A75D49800904499 /* .gitignore in Resources */,
 				678E131017951549005B6D19 /* Default-568h@2x~iphone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -898,6 +893,7 @@
 				2A11896F1A75D4AA00904499 /* b2Collision.cpp in Sources */,
 				2A1189861A75D4AA00904499 /* b2ChainAndCircleContact.cpp in Sources */,
 				2A1189A01A75D4AA00904499 /* b2Rope.cpp in Sources */,
+				2A986BF31A831B8600C4A7F0 /* TouchEvent.cpp in Sources */,
 				2A1189981A75D4AA00904499 /* b2RopeJoint.cpp in Sources */,
 				2A1189761A75D4AA00904499 /* b2PolygonShape.cpp in Sources */,
 				2A11897A1A75D4AA00904499 /* b2Math.cpp in Sources */,
@@ -907,7 +903,6 @@
 				2A1189951A75D4AA00904499 /* b2PrismaticJoint.cpp in Sources */,
 				2A11899D1A75D4AA00904499 /* b2ParticleGroup.cpp in Sources */,
 				2A1189ED1A79D19200904499 /* ofxTimeMeasurements.cpp in Sources */,
-				2A1188521A75D49800904499 /* README.md in Sources */,
 				2A11899C1A75D4AA00904499 /* b2ParticleAssembly.cpp in Sources */,
 				2A1189791A75D4AA00904499 /* b2FreeList.cpp in Sources */,
 				2A1189961A75D4AA00904499 /* b2PulleyJoint.cpp in Sources */,
@@ -916,10 +911,12 @@
 				2A1189A71A75D4AA00904499 /* ofxBox2dBaseShape.cpp in Sources */,
 				2A1189701A75D4AA00904499 /* b2Distance.cpp in Sources */,
 				2A1189A81A75D4AA00904499 /* ofxBox2dCircle.cpp in Sources */,
+				2A986BF21A831B8600C4A7F0 /* Node.cpp in Sources */,
 				2A11896B1A75D4AA00904499 /* b2BroadPhase.cpp in Sources */,
 				2A1189A61A75D4AA00904499 /* ofxBox2d.cpp in Sources */,
 				2A1189781A75D4AA00904499 /* b2Draw.cpp in Sources */,
 				E4D8936E11527B74007E1F53 /* main.mm in Sources */,
+				2A986BF41A831B8600C4A7F0 /* TouchManager.cpp in Sources */,
 				2A1189931A75D4AA00904499 /* b2MotorJoint.cpp in Sources */,
 				2A1189811A75D4AA00904499 /* b2ContactManager.cpp in Sources */,
 				2A1189891A75D4AA00904499 /* b2Contact.cpp in Sources */,
@@ -932,19 +929,17 @@
 				2A1189881A75D4AA00904499 /* b2CircleContact.cpp in Sources */,
 				2AE242FF1A8075EE00515318 /* ofxBox2dRevoluteJoint.cpp in Sources */,
 				2A1189841A75D4AA00904499 /* b2World.cpp in Sources */,
+				2A986BF01A831B8600C4A7F0 /* BitmapTextButton.cpp in Sources */,
 				2A1189711A75D4AA00904499 /* b2DynamicTree.cpp in Sources */,
-				2A1188551A75D49800904499 /* ofxUINode.cpp in Sources */,
 				2A1189911A75D4AA00904499 /* b2GearJoint.cpp in Sources */,
 				2A11899B1A75D4AA00904499 /* b2Particle.cpp in Sources */,
 				2A1189871A75D4AA00904499 /* b2ChainAndPolygonContact.cpp in Sources */,
-				2A1188561A75D49800904499 /* TouchEvent.cpp in Sources */,
 				2A1189801A75D4AA00904499 /* b2Body.cpp in Sources */,
 				2A1189851A75D4AA00904499 /* b2WorldCallbacks.cpp in Sources */,
 				2A1189921A75D4AA00904499 /* b2Joint.cpp in Sources */,
 				2A11898A1A75D4AA00904499 /* b2ContactSolver.cpp in Sources */,
 				2A11898D1A75D4AA00904499 /* b2PolygonAndCircleContact.cpp in Sources */,
 				2A11898E1A75D4AA00904499 /* b2PolygonContact.cpp in Sources */,
-				2A1188541A75D49800904499 /* TextureButton.cpp in Sources */,
 				2A11897E1A75D4AA00904499 /* b2Timer.cpp in Sources */,
 				2A11898C1A75D4AA00904499 /* b2EdgeAndPolygonContact.cpp in Sources */,
 				2A11896D1A75D4AA00904499 /* b2CollideEdge.cpp in Sources */,
@@ -955,16 +950,15 @@
 				2A1189AB1A75D4AA00904499 /* ofxBox2dParticleSystem.cpp in Sources */,
 				2A1189A91A75D4AA00904499 /* ofxBox2dEdge.cpp in Sources */,
 				2A1189BD1A75F1D000904499 /* Resources.cpp in Sources */,
-				2A1188531A75D49800904499 /* BitmapTextButton.cpp in Sources */,
 				2A1189971A75D4AA00904499 /* b2RevoluteJoint.cpp in Sources */,
 				2A11897F1A75D4AA00904499 /* b2TrackedBlock.cpp in Sources */,
 				2A11897D1A75D4AA00904499 /* b2Stat.cpp in Sources */,
 				2A11899A1A75D4AA00904499 /* b2WheelJoint.cpp in Sources */,
 				2A1189A11A75D4AA00904499 /* del_impl.cpp in Sources */,
 				2A11897B1A75D4AA00904499 /* b2Settings.cpp in Sources */,
+				2A986BF11A831B8600C4A7F0 /* TextureButton.cpp in Sources */,
 				2A1189941A75D4AA00904499 /* b2MouseJoint.cpp in Sources */,
 				2A1189721A75D4AA00904499 /* b2TimeOfImpact.cpp in Sources */,
-				2A1188571A75D49800904499 /* TouchManager.cpp in Sources */,
 				2A11899F1A75D4AA00904499 /* b2VoronoiDiagram.cpp in Sources */,
 				2A11897C1A75D4AA00904499 /* b2StackAllocator.cpp in Sources */,
 				2A11898B1A75D4AA00904499 /* b2EdgeAndCircleContact.cpp in Sources */,
@@ -990,6 +984,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LIBRARY = "libc++";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ofxiOS_Prefix.pch;
 				HEADER_SEARCH_PATHS = (
@@ -1008,6 +1003,7 @@
 		1D6058950D05DD3E006BFB54 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ofxiOS_Prefix.pch;
 				HEADER_SEARCH_PATHS = (

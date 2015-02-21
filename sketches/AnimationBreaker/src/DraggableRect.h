@@ -10,17 +10,17 @@
 #define __AnimationBreaker__DraggableRect__
 
 #include <stdio.h>
-#include "ofxUINode.h"
+#include "ofxInterface.h"
 
-class DraggableRect : public ofxUINode
+class DraggableRect : public ofxInterface::Node
 {
 public:
 
 	void setup(int id, float w, float h);
 
-	void onTouchDown(TouchEvent& event);
-	void onTouchMove(TouchEvent& event);
-	void onTouchUp(TouchEvent& event);
+	void onTouchDown(ofxInterface::TouchEvent& event);
+	void onTouchMove(ofxInterface::TouchEvent& event);
+	void onTouchUp(ofxInterface::TouchEvent& event);
 
 	void update(float dt);
 	void draw();

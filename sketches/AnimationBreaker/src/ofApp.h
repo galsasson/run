@@ -1,10 +1,12 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ofxUINode.h"
+#include "ofxInterface.h"
 #include "DraggableRect.h"
 #include "TextureButton.h"
 #include "ofxSprite.h"
+
+using namespace ofxInterface;
 
 class ofApp : public ofBaseApp{
 
@@ -40,7 +42,7 @@ private:
 	ofVec2f spriteSize;
 	float pageMargin;
 
-	ofxUINode scene;
+	Node scene;
 	vector<DraggableRect*> rects;
 	TextureButton* page;
 
