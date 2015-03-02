@@ -10,6 +10,14 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		2A37EEE71A991F190086A8B5 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A37EEE51A991F190086A8B5 /* Player.cpp */; };
+		2A37EEEA1A991F260086A8B5 /* Room.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A37EEE81A991F260086A8B5 /* Room.cpp */; };
+		2A37EF191A9920760086A8B5 /* BitmapTextButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A37EF031A9920760086A8B5 /* BitmapTextButton.cpp */; };
+		2A37EF1A1A9920760086A8B5 /* TextureButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A37EF051A9920760086A8B5 /* TextureButton.cpp */; };
+		2A37EF1B1A9920760086A8B5 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A37EF071A9920760086A8B5 /* Node.cpp */; };
+		2A37EF1C1A9920760086A8B5 /* TouchEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A37EF0A1A9920760086A8B5 /* TouchEvent.cpp */; };
+		2A37EF1D1A9920760086A8B5 /* TouchManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A37EF0C1A9920760086A8B5 /* TouchManager.cpp */; };
+		2A37EF231A9922DB0086A8B5 /* Constants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A37EF211A9922DB0086A8B5 /* Constants.cpp */; };
 		5326AEA810A23A0500278DE6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5326AEA710A23A0500278DE6 /* CoreLocation.framework */; };
 		53F323EB10A20EDB00E0DAE4 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F323EA10A20EDB00E0DAE4 /* OpenAL.framework */; };
 		678E130817951530005B6D19 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 678E130717951530005B6D19 /* Icon@2x.png */; };
@@ -52,6 +60,23 @@
 		1D6058910D05DD3D006BFB54 /* rooms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rooms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2A37EEE51A991F190086A8B5 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		2A37EEE61A991F190086A8B5 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		2A37EEE81A991F260086A8B5 /* Room.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Room.cpp; sourceTree = "<group>"; };
+		2A37EEE91A991F260086A8B5 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
+		2A37EF031A9920760086A8B5 /* BitmapTextButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BitmapTextButton.cpp; sourceTree = "<group>"; };
+		2A37EF041A9920760086A8B5 /* BitmapTextButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitmapTextButton.h; sourceTree = "<group>"; };
+		2A37EF051A9920760086A8B5 /* TextureButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextureButton.cpp; sourceTree = "<group>"; };
+		2A37EF061A9920760086A8B5 /* TextureButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureButton.h; sourceTree = "<group>"; };
+		2A37EF071A9920760086A8B5 /* Node.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
+		2A37EF081A9920760086A8B5 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		2A37EF091A9920760086A8B5 /* ofxInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxInterface.h; sourceTree = "<group>"; };
+		2A37EF0A1A9920760086A8B5 /* TouchEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TouchEvent.cpp; sourceTree = "<group>"; };
+		2A37EF0B1A9920760086A8B5 /* TouchEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchEvent.h; sourceTree = "<group>"; };
+		2A37EF0C1A9920760086A8B5 /* TouchManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TouchManager.cpp; sourceTree = "<group>"; };
+		2A37EF0D1A9920760086A8B5 /* TouchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchManager.h; sourceTree = "<group>"; };
+		2A37EF211A9922DB0086A8B5 /* Constants.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Constants.cpp; sourceTree = "<group>"; };
+		2A37EF221A9922DB0086A8B5 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* ofxiOS_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxiOS_Prefix.pch; sourceTree = "<group>"; };
 		5326AEA710A23A0500278DE6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		53F323EA10A20EDB00E0DAE4 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -149,6 +174,41 @@
 			name = "core frameworks";
 			sourceTree = "<group>";
 		};
+		2A37EEEB1A9920760086A8B5 /* ofxInterface */ = {
+			isa = PBXGroup;
+			children = (
+				2A37EF011A9920760086A8B5 /* src */,
+			);
+			name = ofxInterface;
+			path = ../../external_addons/ofxInterface;
+			sourceTree = "<group>";
+		};
+		2A37EF011A9920760086A8B5 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				2A37EF021A9920760086A8B5 /* components */,
+				2A37EF071A9920760086A8B5 /* Node.cpp */,
+				2A37EF081A9920760086A8B5 /* Node.h */,
+				2A37EF091A9920760086A8B5 /* ofxInterface.h */,
+				2A37EF0A1A9920760086A8B5 /* TouchEvent.cpp */,
+				2A37EF0B1A9920760086A8B5 /* TouchEvent.h */,
+				2A37EF0C1A9920760086A8B5 /* TouchManager.cpp */,
+				2A37EF0D1A9920760086A8B5 /* TouchManager.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		2A37EF021A9920760086A8B5 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				2A37EF031A9920760086A8B5 /* BitmapTextButton.cpp */,
+				2A37EF041A9920760086A8B5 /* BitmapTextButton.h */,
+				2A37EF051A9920760086A8B5 /* TextureButton.cpp */,
+				2A37EF061A9920760086A8B5 /* TextureButton.h */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
 		BB16E9930F2B1E5900518274 /* libs */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +220,7 @@
 		BB16F26B0F2B646B00518274 /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				2A37EEEB1A9920760086A8B5 /* ofxInterface */,
 			);
 			name = addons;
 			sourceTree = "<group>";
@@ -198,6 +259,12 @@
 				E4D8936B11527B74007E1F53 /* main.mm */,
 				E4D8936D11527B74007E1F53 /* ofApp.mm */,
 				E4D8936C11527B74007E1F53 /* ofApp.h */,
+				2A37EEE51A991F190086A8B5 /* Player.cpp */,
+				2A37EEE61A991F190086A8B5 /* Player.h */,
+				2A37EEE81A991F260086A8B5 /* Room.cpp */,
+				2A37EEE91A991F260086A8B5 /* Room.h */,
+				2A37EF211A9922DB0086A8B5 /* Constants.cpp */,
+				2A37EF221A9922DB0086A8B5 /* Constants.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -308,8 +375,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A37EF1D1A9920760086A8B5 /* TouchManager.cpp in Sources */,
+				2A37EF1B1A9920760086A8B5 /* Node.cpp in Sources */,
 				E4D8936E11527B74007E1F53 /* main.mm in Sources */,
+				2A37EF1C1A9920760086A8B5 /* TouchEvent.cpp in Sources */,
 				E4D8936F11527B74007E1F53 /* ofApp.mm in Sources */,
+				2A37EF1A1A9920760086A8B5 /* TextureButton.cpp in Sources */,
+				2A37EEEA1A991F260086A8B5 /* Room.cpp in Sources */,
+				2A37EF231A9922DB0086A8B5 /* Constants.cpp in Sources */,
+				2A37EEE71A991F190086A8B5 /* Player.cpp in Sources */,
+				2A37EF191A9920760086A8B5 /* BitmapTextButton.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
